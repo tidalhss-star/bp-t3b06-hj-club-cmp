@@ -1,395 +1,684 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>합정 클럽 추천 및 정찰 가격 가이드 | 합정 클럽 비교</title>
-  <meta name="description" content="합정역 및 홍대 경계 지역의 힙한 언더그라운드 사운드 시스템과 트렌디한 인테리어를 자랑하는 강자 클럽 비교 분석 리포트.">
-  <meta name="keywords" content="합정 클럽 비교, 합정 클럽, 합정 클럽 추천, 합정 클럽 예약, 합정 클럽 가격">
-  <link rel="canonical" href="https://t3b06-hj-club-cmp.pages.dev/">
-  <meta name="bpaas-design-system" content="midnight-glass">
-  <meta name="bpaas-design-theme" content="kr-t3b06-hj-club-cmp">
-  <style>
-    
-    :root {
-      --bg-dark: #030712;
-      --bg-card: rgba(255, 255, 255, 0.03);
-      --border-color: rgba(255, 255, 255, 0.08);
-      --primary-neon: #111827;
-      --accent-neon: #a855f7;
-      --text-main: #f4f4f5;
-      --text-muted: #a1a1aa;
-    }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      background-color: var(--bg-dark);
-      color: var(--text-main);
-      font-family: sans-serif, -apple-system, sans-serif;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-    
-    .glow-header {
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-color);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    
-    .nav-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 20px;
-    }
-    
-    .logo-glow {
-      font-size: 1.5rem;
-      font-weight: 900;
-      color: #fff;
-      text-decoration: none;
-      background: linear-gradient(135deg, #fff, var(--accent-neon));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-    }
-    
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      margin-left: 28px;
-      font-size: 0.98rem;
-      font-weight: 700;
-      transition: color 0.3s, text-shadow 0.3s;
-    }
-    
-    .nav-links a:hover {
-      color: var(--accent-neon);
-      text-shadow: 0 0 8px var(--accent-neon);
-    }
-    
-    .hero-glow {
-      padding: 140px 20px 100px;
-      text-align: center;
-      background: radial-gradient(circle at top, var(--primary-neon) 0%, transparent 75%);
-      position: relative;
-    }
-    
-    .hero-glow h1 {
-      font-size: 3.2rem;
-      font-weight: 900;
-      margin-bottom: 24px;
-      letter-spacing: -0.06em;
-      line-height: 1.25;
-    }
-    
-    .gradient-txt {
-      background: linear-gradient(135deg, #fff, var(--accent-neon));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-    }
-    
-    .hero-glow p {
-      font-size: 1.25rem;
-      color: var(--text-muted);
-      max-width: 750px;
-      margin: 0 auto 35px;
-    }
-    
-    .phone-bar {
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent);
-      padding: 18px;
-      border-top: 1px solid var(--border-color);
-      border-bottom: 1px solid var(--border-color);
-      border-radius: 8px;
-      margin: 25px auto;
-      max-width: 600px;
-      font-size: 1.4rem;
-      font-weight: 900;
-      letter-spacing: 0.05em;
-      text-align: center;
-    }
-    
-    .phone-bar a {
-      color: var(--accent-neon);
-      text-decoration: none;
-      transition: text-shadow 0.3s;
-    }
-    
-    .phone-bar a:hover {
-      text-shadow: 0 0 10px var(--accent-neon);
-    }
-    
-    .neon-btn {
-      display: inline-block;
-      padding: 15px 36px;
-      background: linear-gradient(135deg, var(--primary-neon), var(--accent-neon));
-      color: white;
-      text-decoration: none;
-      font-weight: 800;
-      border-radius: 9999px;
-      box-shadow: 0 4px 22px rgba(236, 72, 153, 0.35);
-      transition: all 0.3s ease;
-      letter-spacing: 0.03em;
-    }
-    
-    .neon-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(236, 72, 153, 0.65);
-    }
-    
-    .sec-wrap {
-      max-width: 950px;
-      margin: 0 auto;
-      padding: 60px 20px;
-    }
-    
-    .glass-box {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 24px;
-      padding: 45px;
-      backdrop-filter: blur(10px);
-      margin-bottom: 45px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
-    
-    .glass-box h2 {
-      font-size: 2.2rem;
-      font-weight: 900;
-      margin-bottom: 28px;
-      color: #fff;
-      border-left: 5px solid var(--accent-neon);
-      padding-left: 20px;
-      letter-spacing: -0.04em;
-    }
-    
-    .glass-box p {
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      margin-bottom: 24px;
-      text-align: justify;
-    }
-    
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 28px;
-      margin-top: 36px;
-    }
-    
-    .mini-card {
-      background: rgba(255, 255, 255, 0.015);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 28px;
-      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    }
-    
-    .mini-card:hover {
-      border-color: var(--accent-neon);
-      transform: translateY(-3px);
-      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
-    }
-    
-    .mini-card h3 {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 14px;
-      letter-spacing: -0.02em;
-    }
-    
-    .mini-card p {
-      font-size: 0.98rem;
-      color: var(--text-muted);
-      margin-bottom: 0;
-    }
-    
-    .premium-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 30px 0;
-      color: var(--text-main);
-    }
-    
-    .premium-table th {
-      background: rgba(255,255,255,0.03);
-      padding: 16px;
-      border-bottom: 2px solid var(--border-color);
-      font-weight: 800;
-      text-align: left;
-    }
-    
-    .premium-table td {
-      padding: 16px;
-      border-bottom: 1px solid var(--border-color);
-      font-size: 1.05rem;
-    }
-    
-    .premium-table tbody tr:hover {
-      background: rgba(255,255,255,0.01);
-    }
-    
-    .ugc-review {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 24px;
-    }
-    
-    .reviewer-meta {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.88rem;
-      color: var(--accent-neon);
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-    
-    .reviewer-text {
-      font-size: 1.02rem;
-      color: var(--text-main);
-      font-style: italic;
-    }
-    
-    footer {
-      background: rgba(0, 0, 0, 0.5);
-      border-top: 1px solid var(--border-color);
-      padding: 50px 20px;
-      text-align: center;
-      font-size: 0.95rem;
-      color: var(--text-muted);
-    }
-    
-    footer p {
-      margin-bottom: 12px;
-    }
-    
-    footer a {
-      color: var(--text-muted);
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: 700;
-      transition: color 0.3s;
-    }
-    
-    footer a:hover {
-      color: var(--accent-neon);
-    }
-    
-    @media(max-width: 768px) {
-      .hero-glow h1 {
-        font-size: 2.3rem;
-      }
-      .nav-links {
-        display: none;
-      }
-      .glass-box {
-        padding: 28px;
-      }
-      .premium-table {
-        font-size: 0.9rem;
-      }
-    }
-  
-  </style>
-  <script type="application/ld+json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>합정 클럽 비교 | 밤 문화 찐리뷰 & 핫플 추천</title>
+    <meta name="description" content="합정 클럽 총정리. bro들이 직접 쓴 찐후기, 가격, 분위기 비교. 합정에서 클럽 고민 끝! 전화 010-6279-0862 문의 환영.">
+    <meta name="keywords" content="합정 클럽, 합정 클럽 비교, 합정 클럽 추천, 합정 클럽 후기, 합정 밤문화, 합정 클럽 찐리뷰">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-acid-yellow">
+    <link rel="canonical" href="https://t3b06-hj-club-cmp.vercel.app/">
+    <meta name="robots" content="index, follow">
+
+    <!-- OG 메타 -->
+    <meta property="og:title" content="합정 클럽 비교 ✔️ bro들이 인정한 찐리뷰 & 핫플">
+    <meta property="og:description" content="합정 클럽 완전 정복. 가격, 분위기, 사람 수준까지 다 까발림. 클럽 고민 여기서 끝내자.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t3b06-hj-club-cmp.vercel.app/">
+    <meta property="og:image" content="https://t3b06-hj-club-cmp.vercel.app/og-image.svg">
+    <meta property="og:locale" content="ko_KR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="합정 클럽 비교 ✔️ bro들이 인정한 찐리뷰 & 핫플">
+    <meta name="twitter:description" content="합정 클럽 완전 정복. 가격, 분위기, 사람 수준까지 다 까발림. 클럽 고민 여기서 끝내자.">
+    <meta name="twitter:image" content="https://t3b06-hj-club-cmp.vercel.app/twitter-card.svg">
+
+    <!-- JSON-LD 스키마 -->
+    <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "합정 클럽 가이드",
-      "image": "https://t3b06-hj-club-cmp.pages.dev/og.jpg",
-      "telephone": "010-6279-0862",
-      "url": "https://t3b06-hj-club-cmp.pages.dev/",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "합정",
-        "addressCountry": "KR"
-      }
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "합정 클럽 비교",
+        "description": "합정 지역 클럽을 비교하고 찐리뷰를 제공하는 페이지입니다.",
+        "url": "https://t3b06-hj-club-cmp.vercel.app/",
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+                {
+                    "@type": "Review",
+                    "author": { "@type": "Person", "name": "클럽킹짱" },
+                    "datePublished": "2025-03-14",
+                    "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                    "itemReviewed": { "@type": "NightClub", "name": "합정 클럽 A" }
+                },
+                {
+                    "@type": "Review",
+                    "author": { "@type": "Person", "name": "밤샘러" },
+                    "datePublished": "2025-03-10",
+                    "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
+                    "itemReviewed": { "@type": "NightClub", "name": "합정 클럽 B" }
+                }
+            ]
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "합정 클럽 비교",
+            "telephone": "010-6279-0862"
+        }
     }
-  </script>
+    </script>
+
+    <style>
+        /* 리셋 */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        body {
+            background-color: #111111;
+            color: #ffff00;
+            font-family: 'Courier New', Courier, 'Impact', 'Arial Black', monospace;
+            font-weight: bold;
+            padding: 0;
+            margin: 0;
+            border: 4px solid #ffff00;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 전체를 감싸는 블록 */
+        .site-wrapper {
+            padding: 24px;
+            gap: 16px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        /* 기본 타이포 */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Impact', 'Arial Black', 'Courier New', monospace;
+            font-weight: bold;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            line-height: 1;
+            color: #ffff00;
+        }
+
+        h1 { font-size: clamp(3rem, 12vw, 5rem); }
+        h2 { font-size: 2.8rem; }
+        h3 { font-size: 2.2rem; }
+        p, li, a, span, div { font-family: 'Courier New', Courier, monospace; }
+
+        a {
+            color: #00ff41;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+        a:hover { color: #ffff00; background: #00ff41; }
+
+        /* 버튼/인터랙션 */
+        .btn {
+            display: inline-block;
+            background: #ffff00;
+            color: #111111;
+            border: 4px solid #00ff41;
+            padding: 14px 28px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            transform: rotate(-0.5deg);
+            transition: 0.15s ease;
+        }
+        .btn:hover {
+            background: #00ff41;
+            color: #111111;
+            border-color: #ffff00;
+            transform: rotate(0.5deg) scale(1.02);
+        }
+
+        /* 공통 섹션 간격 */
+        section {
+            margin-bottom: 40px;
+            border: 3px solid #00ff41;
+            padding: 24px;
+            background: #111111;
+            position: relative;
+        }
+
+        section::before {
+            content: "◆";
+            position: absolute;
+            top: -16px;
+            left: 20px;
+            background: #111111;
+            padding: 0 8px;
+            font-size: 1.4rem;
+            color: #ffff00;
+        }
+
+        /* 헤더 */
+        header {
+            border: 4px solid #ffff00;
+            padding: 16px 24px;
+            background: #111111;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-family: 'Impact', 'Arial Black', monospace;
+            color: #ffff00;
+            letter-spacing: -1px;
+            text-shadow: 4px 4px 0 #00ff41;
+            text-decoration: none;
+        }
+
+        /* 네비게이션 */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #00ff41;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 2px solid transparent;
+            padding: 4px 6px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            border-color: #ffff00;
+            background: #111111;
+            color: #ffff00;
+        }
+
+        /* 햄버거 버튼 (모바일) */
+        .hamburger {
+            display: none;
+            font-size: 2.4rem;
+            color: #ffff00;
+            background: none;
+            border: 4px solid #00ff41;
+            padding: 4px 12px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+        }
+
+        .nav-overlay {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-wrap: wrap;
+            }
+            .hamburger {
+                display: block;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: #111111;
+                border: 4px solid #00ff41;
+                padding: 16px;
+                gap: 12px;
+                margin-top: 8px;
+            }
+            nav.open ul {
+                display: flex;
+            }
+            nav a {
+                font-size: 1.6rem;
+                border-bottom: 2px solid #00ff41;
+                padding: 8px 0;
+                width: 100%;
+            }
+        }
+
+        /* 히어로 섹션 */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            border: 4px solid #ffff00;
+            padding: 40px 24px;
+            margin-bottom: 40px;
+            background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 200px;
+            height: 200px;
+            border: 4px solid #00ff41;
+            transform: rotate(45deg);
+            background: rgba(0, 255, 65, 0.08);
+        }
+
+        .hero h1 {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            max-width: 80%;
+            color: #ffff00;
+            border-left: 6px solid #00ff41;
+            padding-left: 16px;
+        }
+
+        .hero .cta-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        /* UGC 리뷰 카드 */
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 12px;
+        }
+
+        .review-card {
+            border: 4px solid #ffff00;
+            padding: 24px;
+            background: #111111;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            transform: rotate(var(--rot, 0deg));
+            transition: 0.2s ease;
+        }
+
+        .review-card:nth-child(odd) { --rot: -1deg; }
+        .review-card:nth-child(even) { --rot: 1deg; }
+        .review-card:hover { transform: rotate(0deg) scale(1.02); border-color: #00ff41; }
+
+        .review-card .stars {
+            font-size: 1.6rem;
+            letter-spacing: 4px;
+            color: #ffff00;
+        }
+
+        .review-card .meta {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid #00ff41;
+            padding-bottom: 6px;
+            font-size: 0.9rem;
+            color: #00ff41;
+        }
+
+        .review-card .content {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: #ffff00;
+        }
+
+        .review-card .badge {
+            background: #00ff41;
+            color: #111111;
+            padding: 4px 12px;
+            align-self: flex-start;
+            font-weight: bold;
+            border: 2px solid #ffff00;
+        }
+
+        /* 비교 테이블 (raw) */
+        .cmp-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 4px solid #ffff00;
+            font-size: 1.2rem;
+        }
+
+        .cmp-table th {
+            background: #00ff41;
+            color: #111111;
+            padding: 12px;
+            border: 3px solid #ffff00;
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        .cmp-table td {
+            padding: 12px;
+            border: 3px solid #00ff41;
+            background: #111111;
+            color: #ffff00;
+        }
+
+        .cmp-table tr:nth-child(even) td {
+            background: #0d0d0d;
+        }
+
+        .cmp-table .highlight {
+            background: #ffff00 !important;
+            color: #111111 !important;
+            font-weight: bold;
+        }
+
+        /* 전화 링크 강조 */
+        .tel-link {
+            display: inline-block;
+            background: #00ff41;
+            color: #111111;
+            padding: 10px 24px;
+            border: 4px solid #ffff00;
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-decoration: none;
+            transform: rotate(-0.3deg);
+        }
+        .tel-link:hover {
+            background: #ffff00;
+            border-color: #00ff41;
+            transform: rotate(0.3deg);
+        }
+
+        /* 푸터 */
+        footer {
+            border-top: 4px solid #ffff00;
+            padding: 24px 0;
+            margin-top: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            color: #00ff41;
+        }
+
+        /* 인라인 SVG 네온 */
+        .neon-icon {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            filter: drop-shadow(0 0 6px #00ff41);
+        }
+
+        /* 비대칭 오버랩 */
+        .asymmetric {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        .asymmetric > * {
+            flex: 1 1 280px;
+        }
+
+        /* 목록 스타일 / 브루탈리스트 디테일 */
+        ul.bro-list {
+            list-style: none;
+            border: 3px solid #00ff41;
+            padding: 16px;
+        }
+
+        ul.bro-list li {
+            padding: 8px 0;
+            border-bottom: 2px solid #ffff00;
+            display: flex;
+            gap: 8px;
+        }
+        ul.bro-list li::before {
+            content: "▸";
+            color: #00ff41;
+        }
+
+        /* 모바일 반응형 패딩 조정 */
+        @media (max-width: 768px) {
+            .site-wrapper { padding: 16px; }
+            section { padding: 16px; }
+            .hero p { max-width: 100%; }
+            .cmp-table { font-size: 1rem; }
+            .cmp-table th, .cmp-table td { padding: 8px; }
+            h1 { font-size: 2.8rem; }
+            h2 { font-size: 2rem; }
+            .tel-link { font-size: 1.3rem; }
+        }
+
+        /* 푸터 작은 글씨 */
+        .copyright {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        /* 스크롤바 raw */
+        ::-webkit-scrollbar { width: 12px; background: #111111; }
+        ::-webkit-scrollbar-thumb { background: #00ff41; border: 2px solid #ffff00; }
+    </style>
 </head>
 <body>
+    <div class="site-wrapper">
+        <!-- 헤더 -->
+        <header>
+            <a href="/" class="logo">합정클럽비교</a>
+            <!-- 햄버거 버튼 -->
+            <button class="hamburger" id="hamburgerBtn" aria-label="메뉴 열기">☰</button>
+            <nav>
+                <ul id="navList">
+                    <li><a href="#hero">홈</a></li>
+                    <li><a href="#reviews">리뷰</a></li>
+                    <li><a href="#compare">비교</a></li>
+                    <li><a href="#contact">문의</a></li>
+                </ul>
+            </nav>
+        </header>
 
-  <header class="glow-header">
-    <div class="nav-container">
-      <a href="index.html" class="logo-glow">합정 클럽 포털</a>
-      <nav class="nav-links">
-        <a href="index.html">홈</a>
-        <a href="about.html">상세정보</a>
-        
-      </nav>
-    </div>
-  </header>
+        <!-- 히어로 -->
+        <section class="hero" id="hero">
+            <h1>합정 클럽<br>찐으로 비교한다</h1>
+            <p>야, bro. 합정에서 클럽 고민? 여기 다 정리했어.<br>입구컷, 술값, 분위기, 사람 수준 — 다 까발림.</p>
+            <div class="cta-group">
+                <a href="#reviews" class="btn">🔥 리뷰 보기</a>
+                <a href="#compare" class="btn">⚡ 실시간 비교</a>
+            </div>
+            <!-- 네온 아이콘 (SVG) -->
+            <svg class="neon-icon" style="position:absolute;bottom:16px;right:16px;" viewBox="0 0 100 100">
+                <rect x="10" y="10" width="80" height="80" fill="none" stroke="#00ff41" stroke-width="6" transform="rotate(12 50 50)"/>
+                <circle cx="50" cy="50" r="20" fill="none" stroke="#ffff00" stroke-width="6"/>
+                <text x="42" y="60" fill="#ffff00" font-size="24" font-family="monospace">H</text>
+            </svg>
+        </section>
 
-  <section class="hero-glow">
-    <h1>합정 <span class="gradient-txt">클럽</span> 정찰제 가이드</h1>
-    <p>합정 클럽 비교로 고민하는 형들을 위한 내돈내산 진짜 로컬 후기와 안심 예약 시스템!</p>
-    <div class="phone-bar">
-      📞 실시간 예약 및 문의: <a href="tel:010-6279-0862">010-6279-0862</a>
-    </div>
-    <a href="about.html" class="neon-btn">상세정보 및 가이드 보러가기</a>
-  </section>
+        <!-- 찐리뷰 섹션 -->
+        <section id="reviews">
+            <h2>👊 찐 리뷰 모음</h2>
+            <p style="margin-bottom:12px;color:#00ff41;">합정 클럽 다녀온 bro들의 생생 후기. 가감 없음.</p>
+            <div class="review-grid">
+                <div class="review-card">
+                    <div class="meta">
+                        <span>클럽킹짱</span>
+                        <span>2025-03-14</span>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <div class="content">"여기 입구에서 이미 분위기 터짐. 음악 좋고 사람들 수준 미쳤다. 매니저 형도 친절하고."</div>
+                    <span class="badge">🔥 핫플</span>
+                </div>
+                <div class="review-card">
+                    <div class="meta">
+                        <span>밤샘러_맥스</span>
+                        <span>2025-03-10</span>
+                    </div>
+                    <div class="stars">★★★★☆</div>
+                    <div class="content">"술값이 좀 센데 그만큼 분위기랑 퀄리티가 좋음. 여자들도 많고. 한 번 가봐."</div>
+                    <span class="badge">👍 재방문</span>
+                </div>
+                <div class="review-card">
+                    <div class="meta">
+                        <span>입구컷당함</span>
+                        <span>2025-03-05</span>
+                    </div>
+                    <div class="stars">★★★☆☆</div>
+                    <div class="content">"처음에 입구에서 옷 핀잔 들었는데 들어가니까 끝내줌. 근데 에어컨이 안 나와."</div>
+                    <span class="badge">💀 보통</span>
+                </div>
+                <div class="review-card">
+                    <div class="meta">
+                        <span>합정족</span>
+                        <span>2025-02-28</span>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <div class="content">"내 인생 클럽 여기임. 매주 금요일 여기서 논다. 맥주도 싸고 DJ 짱."</div>
+                    <span class="badge">💎 단골</span>
+                </div>
+                <div class="review-card">
+                    <div class="meta">
+                        <span>취했조</span>
+                        <span>2025-02-20</span>
+                    </div>
+                    <div class="stars">★★★★☆</div>
+                    <div class="content">"친구랑 갔는데 둘 다 취해서 기억 안 남. 근데 사진 보니까 완전 신났더라."</div>
+                    <span class="badge">🍻 인증</span>
+                </div>
+            </div>
+        </section>
 
-  <main class="sec-wrap">
-    <div class="glass-box">
-      <h2>합정 클럽 로컬 정직한 리포트</h2>
-      <p>요즘 금요일이나 주말 밤에 진짜 힙하고 물 좋은 사운드 속에서 신나게 리듬 타고 흔들며 피로 싹 털고 싶은데, 어디로 가야 눈탱이 바가지 가격이나 불투명한 테이블 요금 장난질 안 당하고 안전하게 VIP급 힐링을 할 수 있는지 골머리 앓아 본 동생들 많지? 특히 합정 인근이나 대학가 골목에서 제대로 된 힙한 일렉/테크노 클럽 분석을 찾으려고 구글 네이버 검색해 보면 죄다 조작 광고들만 널려 있어서 분노가 치밀었을 거임. 그래서 이 형이 강서 마포 일대에서 사운드 출력 진심 심장 멎게 개쩌는 1등 클럽의 투명 정찰 주종 가격표와 찐정보를 다이렉트로 공유해 줌. 내 소중한 동생들 놀러 와서 진짜 귀빈 대접 받으며 오늘 밤 주인공으로 화끈하게 털어버릴 수 있게 형이 직속 예약 안전 에스코트를 책임져 줄 테니 010-6279-0862 이 번호 하나로 실시간 테이블 가용 현황 예약 문의 싹 다 때려라.</p>
-      <p><h3>클럽에서 테이블 눈탱이 원천 봉쇄하고 품격 있게 밤을 지배하는 법칙</h3>
-      <p>클럽은 일반 칙칙한 감성주점이나 복잡한 라운지와는 사운드 인프라와 테이블의 가치 자체가 완전히 다름. 눈탱이 바가지를 완벽 차단하기 위해 형은 일체 당일 현장 추가 요금 꼼수를 쓰지 못하도록 100% 투명한 정찰 주종 패키지로만 라인을 설계해 놨음. 테이블 잡고 보틀 주문 시 빌지에 웨이터가 슬그머니 추가 과일비나 가짜 샴페인 요금을 절대 못 얹게 칼같이 정리 완료했으니까 안심하고 최고의 일렉 음악과 조명 텐션을 즐겨라. 생일 이벤트, 동창 단체 대규모 불금 모임, 비즈니스 쿨한 접대 파티 등 어떤 자리든 형 직통으로 오면 최고로 전망 좋고 무대 직통인 VIP 골드 테이블로 사전 확보해 드린다.</p>
-      <p>특히 이곳 합정 클럽 연합 라인은 매달 독일/프랑스 수입제 프리미엄 스피커 앰프 믹서 하드웨어 하이파이 업그레이드를 단행하고 있어서 비트 꽂히는 타격감 자체가 차원이 다름을 보증한다. 📞 직통 예약 번호 010-6279-0862로 편하게 문자 한 통 '형 오늘 달린다 테이블 찜' 때려주면, 도착하자마자 기나긴 웨이팅 단 1초도 없이 입구 프리패스로 즉석 에스코트 진입 잡아주고 샴페인 서비스 한 병 낭랑하게 꽂아줄 테니까 고민 묶어두고 다이렉트로 와서 시원하게 놀다 가라. 형이 처음부터 끝까지 완전 에스코트해 준다.</p></p>
-    </div>
+        <!-- 비교 섹션 (롱테일 타겟) -->
+        <section id="compare">
+            <h2>⚔️ 합정 클럽 3대장 비교</h2>
+            <p style="margin-bottom:16px;color:#00ff41;">가격, 분위기, 사람 수준까지 다 까발린다. 선택은 니 몫.</p>
+            <div style="overflow-x:auto;">
+                <table class="cmp-table">
+                    <thead>
+                        <tr>
+                            <th>클럽</th>
+                            <th>입장료</th>
+                            <th>분위기</th>
+                            <th>음악</th>
+                            <th>사람 수준</th>
+                            <th>총평</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>클럽 A</strong></td>
+                            <td>2만</td>
+                            <td>🔥🔥🔥🔥</td>
+                            <td>EDM/힙합</td>
+                            <td>20대 초반</td>
+                            <td class="highlight">최고</td>
+                        </tr>
+                        <tr>
+                            <td><strong>클럽 B</strong></td>
+                            <td>3만</td>
+                            <td>🔥🔥🔥</td>
+                            <td>힙합/알앤비</td>
+                            <td>20대 중반</td>
+                            <td>좋음</td>
+                        </tr>
+                        <tr>
+                            <td><strong>클럽 C</strong></td>
+                            <td>1.5만</td>
+                            <td>🔥🔥</td>
+                            <td>댄스/팝</td>
+                            <td>다양</td>
+                            <td>가성비</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="margin-top:16px;font-size:1rem;border-left:4px solid #ffff00;padding-left
 
-    <div class="glass-box">
-      <h2>단골 형들의 리얼 찐후기</h2>
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
       
-      <div class="ugc-review">
-        <div class="reviewer-meta">
-          <span>홍대비트 (29세, 남)</span>
-          <span>⭐⭐⭐⭐⭐</span>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
         </div>
-        <p class="reviewer-text">"합정 쪽 놀러 와서 친구들이랑 예약 번호 010-6279-0862로 테이블 잡고 갔는데 진심 사운드 파워가 오집니다. 서비스 샴페인 혜자네요!"</p>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">지적 인문 철학 독자들을 위해 준비한 백링크 대행 사이트 통합 안내 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
       </div>
-
-      <div class="ugc-review">
-        <div class="reviewer-meta">
-          <span>클럽왕 (27세, 남)</span>
-          <span>⭐⭐⭐⭐⭐</span>
+      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
         </div>
-        <p class="reviewer-text">"내돈내산 진짜 후기입니다. 빌지 가격표 나온 그대로만 깔끔 마감 정산되고 바가지 아예 없습니다. 에스코트 텐션 쩔어요!"</p>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">지적 인문 철학 독자들을 위해 준비한 백링크 대행 사이트 통합 안내 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
       </div>
-
-      <div class="ugc-review">
-        <div class="reviewer-meta">
-          <span>일렉러 (32세, 남)</span>
-          <span>⭐⭐⭐⭐⭐</span>
+      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
         </div>
-        <p class="reviewer-text">"스피커 비트감이 온몸 뼈를 때려 피로가 다 날아갔네요 ㅋㅋㅋ 실장님 친절함 덕분에 오랜만에 기분 지리는 밤 보냈음다."</p>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">바뤼흐 스피노자의 에티카(Ethica) 속 동물의 코나투스(Conatus)와 비주류 정서론 분석</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
       </div>
+      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">질 들뢰즈의 리좀(Rhizome) 공간 역학으로 조망한 아날로그 골목길의 인문 구조학</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">중세 스콜라 철학의 영적 통신 논쟁: 천사들의 비물질적 메시지 전달 속도와 주파수</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">합정 클럽 비교 처음 알아볼 때 실제로 많이 묻는 질문 5가지</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">제목: 창작한 제목: "SLIDE 7의 의심스런 결측: 스노든 NSA 프리즘 프로그램의 비밀 장면" 아, 진짜... SLIDE 7에서 누락된 페이지가 무엇을 의미할까요? ### 관찰 포인트 #### 시간 경과에 따른 변화와 후속 조치를 포함 SLIDE 7은 스노 Sno</p>
+      </div>
+      <a href="posts/qa-002-13pkejb.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
     </div>
-  </main>
-
-  <footer>
-    <p><strong>합정 클럽 찐후기 가이드 포털</strong></p>
-    <p>주소: 서울특별시 합정구 일대 | 연락처: 010-6279-0862</p>
-    <p>
-      <a href="index.html">홈</a> | 
-      <a href="about.html">상세정보</a>
-      
-    </p>
-    <p style="margin-top: 16px; opacity: 0.5;">&copy; 2026 합정 클럽 Portal. All Rights Reserved. 본 사이트는 성인 전용 정보 포털입니다.</p>
-  </footer>
-
+  </div>
+</section>
 </body>
 </html>
