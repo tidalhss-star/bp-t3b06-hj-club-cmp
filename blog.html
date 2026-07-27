@@ -1,325 +1,74 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>블로그 — 합정 클럽 비교 bro들이 쓴 찐리뷰</title>
-    <meta name="description" content="합정 클럽 초보자 가이드. bro의 첫 클럽 경험담과 꿀팁, 입장료, 드레스코드 총정리. 합정 클럽 고민 끝! 전화 010-6279-0862 문의 환영.">
-    <meta name="keywords" content="합정 클럽, 합정 클럽 초보, 합정 클럽 꿀팁, 합정 클럽 입장료, 합정 클럽 드레스코드, 합정 클럽 후기">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-acid-yellow">
-    <link rel="canonical" href="https://t3b06-hj-club-cmp.vercel.app/blog">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="블로그 ✔️ 합정 클럽 초보 가이드 – bro가 알려주는 찐꿀팁">
-    <meta property="og:description" content="처음 합정 클럽 가는 bro들을 위한 완벽 가이드. 입장료부터 복장, 꿀팁까지 다 있다. 전화 010-6279-0862">
-    <meta property="og:image" content="https://t3b06-hj-club-cmp.vercel.app/og-blog.jpg">
-    <meta property="og:url" content="https://t3b06-hj-club-cmp.vercel.app/blog">
-    <meta name="twitter:card" content="summary_large_image">
-    <style>
-        /* 리셋 */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            font-size: 16px;
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            background: #1a1a1a;
-            color: #e0e0e0;
-            line-height: 1.6;
-        }
-        /* 전체를 감싸는 블록 */
-        .site-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        /* 기본 타이포 */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Arial Black', 'Impact', sans-serif;
-            letter-spacing: -1px;
-            text-transform: uppercase;
-            color: #f5e942;
-            margin-bottom: 0.5em;
-        }
-        h1 {
-            font-size: 3rem;
-            line-height: 1.1;
-            border-left: 6px solid #f5e942;
-            padding-left: 20px;
-        }
-        h2 {
-            font-size: 2.2rem;
-            border-bottom: 3px solid #f5e942;
-            padding-bottom: 0.3em;
-        }
-        h3 {
-            font-size: 1.6rem;
-            margin-top: 1.5em;
-        }
-        p, li, a, span, div {
-            font-size: 1.1rem;
-            color: #d4d4d4;
-        }
-        a {
-            color: #f5e942;
-            text-decoration: underline;
-            text-underline-offset: 4px;
-            transition: color 0.2s;
-        }
-        a:hover {
-            color: #fff;
-            text-decoration: none;
-            background: #f5e942;
-            color: #1a1a1a;
-        }
-        /* 버튼/인터랙션 */
-        .btn {
-            display: inline-block;
-            padding: 14px 36px;
-            background: #f5e942;
-            color: #1a1a1a;
-            font-weight: bold;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            border: 3px solid #1a1a1a;
-            cursor: pointer;
-            transition: all 0.15s ease;
-            text-decoration: none;
-        }
-        .btn:hover {
-            background: #1a1a1a;
-            color: #f5e942;
-            border-color: #f5e942;
-            transform: scale(0.96);
-        }
-        /* 공통 섹션 간격 */
-        section {
-            padding: 60px 0;
-            border-bottom: 2px solid #333;
-        }
-        .site-wrapper section:last-of-type {
-            border-bottom: none;
-        }
-        /* 네비게이션 */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 2px solid #f5e942;
-        }
-        .navbar .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #f5e942;
-            text-transform: uppercase;
-            letter-spacing: -2px;
-        }
-        .navbar .logo a {
-            color: #f5e942;
-            text-decoration: none;
-        }
-        .navbar .logo a:hover {
-            background: none;
-            color: #fff;
-        }
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-        .nav-links a {
-            color: #d4d4d4;
-            text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 1.1rem;
-            padding: 4px 0;
-            border-bottom: 2px solid transparent;
-        }
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #f5e942;
-            border-bottom-color: #f5e942;
-        }
-        /* 햄버거 메뉴 (768px 이하) */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            width: 30px;
-            height: 22px;
-            justify-content: space-between;
-        }
-        .hamburger span {
-            display: block;
-            height: 3px;
-            background: #f5e942;
-            border-radius: 2px;
-        }
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                background: #1a1a1a;
-                position: absolute;
-                top: 80px;
-                left: 0;
-                width: 100%;
-                padding: 20px;
-                border-bottom: 2px solid #f5e942;
-                z-index: 100;
-            }
-            .nav-links.active {
-                display: flex;
-            }
-            .hamburger {
-                display: flex;
-            }
-            .navbar {
-                position: relative;
-            }
-            h1 {
-                font-size: 2rem;
-                padding-left: 10px;
-            }
-            h2 {
-                font-size: 1.6rem;
-            }
-        }
-        /* 히어로 */
-        .hero {
-            padding: 80px 0;
-            text-align: center;
-        }
-        .hero p {
-            font-size: 1.3rem;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        /* 블로그 본문 */
-        .blog-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
-        }
-        .blog-article {
-            background: #222;
-            padding: 40px;
-            border: 2px solid #333;
-            box-shadow: 8px 8px 0 #f5e942;
-        }
-        .blog-article h2 {
-            margin-top: 0;
-        }
-        .blog-article p {
-            margin-bottom: 1.2em;
-        }
-        .blog-article ul, .blog-article ol {
-            margin-left: 1.5em;
-            margin-bottom: 1.2em;
-        }
-        .blog-article li {
-            margin-bottom: 0.5em;
-        }
-        .blog-article .highlight {
-            background: #f5e942;
-            color: #1a1a1a;
-            padding: 2px 6px;
-            font-weight: bold;
-        }
-        /* CTA 섹션 */
-        .cta-section {
-            text-align: center;
-            padding: 80px 0;
-        }
-        .cta-section h2 {
-            border-bottom: none;
-        }
-        .cta-section .btn {
-            margin-top: 20px;
-        }
-        /* FAQ */
-        .faq-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-        .faq-item {
-            background: #222;
-            padding: 20px;
-            border-left: 4px solid #f5e942;
-        }
-        .faq-item h3 {
-            margin-top: 0;
-            font-size: 1.3rem;
-        }
-        @media (max-width: 768px) {
-            .faq-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        /* 푸터 */
-        footer {
-            padding: 40px 0;
-            text-align: center;
-            border-top: 2px solid #333;
-            margin-top: 40px;
-        }
-        footer p {
-            font-size: 0.9rem;
-            color: #888;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>합정 클럽 비교 블로그 - 합정에서 첫 클럽 선택을 위한 가이드</title>
+  <meta name="description" content="합정 지역 클럽을 비교하고, 상황에 맞는 최적의 선택을 할 수 있도록 도와주는 블로그 포스트입니다.">
+  <meta name="keywords" content="합정 클럽 비교, 합정 클럽 리뷰, 합정 클럽 선택 가이드">
+  <link rel="canonical" href="https://hapjeong-club-choice.program-school.online/blog.html">
+  <meta property="og:title" content="합정 클럽 비교 블로그 - 합정에서 첫 클럽 선택을 위한 가이드">
+  <meta property="og:description" content="합정 지역 클럽을 비교하고, 상황에 맞는 최적의 선택을 할 수 있도록 도와주는 블로그 포스트입니다.">
+  <meta property="og:url" content="https://hapjeong-club-choice.program-school.online/blog.html">
+  <meta property="og:type" content="article">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="site-wrapper">
-        <!-- 네비게이션 (전체 공통) -->
-        <nav class="navbar">
-            <div class="logo">
-                <a href="/">합정클럽.bro</a>
-            </div>
-            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/">홈</a></li>
-                <li><a href="/compare">비교</a></li>
-                <li><a href="/blog" class="active">블로그</a></li>
-                <li><a href="/contact">문의</a></li>
-            </ul>
-        </nav>
+  <header class="r-nav-9r73">
+    <h1>합정 클럽 선택 가이드</h1>
+    <input type="checkbox" id="menuToggle">
+    <label for="menuToggle">메뉴</label>
+    <nav>
+      <ul>
+        <li class="k-item-4l2y"><a href="/">홈</a></li>
+        <li class="k-item-4l2y"><a href="/clubs">클럽 리스트</a></li>
+        <li class="k-item-4l2y"><a href="/blog">블로그</a></li>
+        <li class="k-item-4l2y"><a href="/contact">문의</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <!-- 히어로 섹션 -->
-        <section class="hero">
-            <h1>블로그: 합정 클럽 초보 가이드</h1>
-            <p>처음 가는 bro들을 위해 내가 직접 겪은 찐후기와 꿀팁을 다 풀어놓는다. 입장료부터 복장, 무조건 피해야 할 실수까지. 다 읽으면 너도 오늘밤 합정 클럽 마스터.</p>
-            <p style="margin-top: 20px; font-style: italic;">✍️ 작성: 클럽 3년차 bro 김동훈</p>
-        </section>
+  <main class="m-grid-6swr">
+    <section class="q-box-ir5h">
+      <h2>합정 클럽, 어디가 내게 맞을까?</h2>
+      <p>합정에 처음 발을 들여놓는 사람이라면, 어디서 뭘 해야 할지 막막할 때가 많아요. 클럽마다 분위기, 음악 장르, 이용 시간, 입장료까지 다 다르거든요. 이 글에서는 <strong>인원 규모</strong>, <strong>시간대</strong>, <strong>목적</strong> 세 가지 관점을 기준으로 클럽을 구분해 보고, 각각에 맞는 추천 클럽을 제시합니다.</p>
+      <p>예를 들어 20대 초반 친구들과 저녁에 살짝 즐기고 싶다면, 분위기가 부드럽고 입장료가 저렴한 소규모 클럽이 좋겠죠? 반면에 EDM 파티를 온종일 즐기고 싶다면 대형 클럽의 사운드 시스템과 라인업을 눈여겨봐야 합니다. 이런 상황별 체크리스트를 함께 확인해 보세요.</p>
+    </section>
 
-        <!-- 블로그 본문 -->
-        <section class="blog-content">
-            <article class="blog-article">
-                <h2>내 첫 클럽 썰 푼다</h2>
-                <p>내가 처음 합정 클럽 간 게 2021년 가을이었나. 그때는 진짜 아무것도 몰랐음. 친한 형이 '그냥 따라와' 해서 간건데, 입구에서 신분증 보여주고 들어가니까 갑자기 심장이 터질 것 같더라. 근데 막상 들어가니까 생각보다 별거 없었어. 어두운데 음악 크고, 사람들 북적이고, 술 냄새 섞인 공기… 근데 그게 되게 중독됐다니까?</p>
-                <p>그날 이후로 합정 클럽 10군데 넘게 돌아다니면서 느낀 점을 지금부터 진짜 솔직하게 적어볼게. 브로들아, 이 글 하나면 너도 오늘 밤부터 당당하게 입장 가능하다.</p>
+    <section class="q-box-ir5h">
+      <h3>인원 규모에 따른 클럽 선택</h3>
+      <p>소규모 클럽(최대 150명)은 친밀한 분위기와 빠른 소통이 장점이에요. 보통 라운지와 바가 결합된 형태라 음악보다 대화가 중심이 됩니다. 대표적인 곳으로는 <em>Club A</em>와 <em>Club B</em>가 있는데, 두 곳 모두 입구에서 바로 분위기를 파악할 수 있어 처음 방문자에게 안성맞춤입니다.</p>
+      <p>중규모 클럽(150~400명)은 파티 감각과 무대 퍼포먼스를 동시에 즐길 수 있어요. <em>Club C</em>는 주말마다 유명 DJ를 초청하고, 2층 라운지에서 테마 파티를 진행합니다. 이 정도 규모라면 음악에 집중하면서도 어느 정도 사람들과 교류할 수 있는 균형 잡힌 환경을 제공합니다.</p>
+      <p>대형 클럽(400명 이상)은 최첨단 사운드와 화려한 조명이 특징이에요. <em>Club D</em>와 <em>Club E</em>는 대형 무대와 거대한 LED 스크린을 갖추고 있어, 국제적인 페스티벌 같은 분위기를 연출합니다. 대규모 인파를 즐기고 싶다면 이곳이 최적이죠.</p>
+    </section>
 
-                <h3>1. 입장료, 미리 알면 돈 아낀다</h3>
-                <p>대부분 합정 클럽 입장료는 <span class="highlight">1~3만원</span> 사이. 평일엔 1만원대, 주말엔 2~3만원이 보통이야. 근데 여기서 중요한 꿀팁: <strong>게스트리스트</strong> 활용해라. 클럽 인스타그램 가보면 보통 스토리에 '오늘 게리' 링크 올라오는데, 거기 이름 적으면 입장료 면제거나 할인됨. 나도 처음엔 몰라서 3만원씩 내고 들어갔는데, 지금은 절대 안 내. 괜히 돈 아깝잖아.</p>
-                <p>또 하나, 여자 혼자 또는 여성 둘이 가면 입장료 없이 들어가는 곳도 많아. 남자 셋 이상은 입장 거절될 확률 높으니까 미리 인원 조절하고 가는 게 좋아.</p>
+    <section class="q-box-ir5h">
+      <h3>시간대별 체크리스트</h3>
+      <p>오후 7시~9시 사이에 방문하면 대부분 클럽이 아직 완전히 열기 전이라 입장료가 저렴하고, 손님도 비교적 적습니다. 이때는 <em>Club A</em>와 같은 ‘프리 오픈’ 이벤트를 활용하면 좋은 입문 기회를 잡을 수 있죠.</p>
+      <p>밤 10시~12시가 가장 활기찬 시간대이며, 대부분의 클럽이 본격적인 라인업을 선보이는 시점입니다. 이때는 대형 클럽에서 진행되는 메인 이벤트를 기대해도 좋고, 중규모 클럽에서는 테마 파티와 맞춤형 음료가 제공됩니다.</p>
+      <p>새벽 1시 이후는 ‘클로즈 타임’이 가까워지면서 인파가 줄고, 분위기가 한층 차분해집니다. 이때는 소규모 라운지에서 조용히 마무리하거나, ‘After Party’가 열리는 곳을 찾아보는 것이 좋습니다.</p>
+    </section>
 
-                <h3>2. 복장 – 너무 치장하지 마</h3>
-                <p>내가 처음 갔을 때 정장 비슷하게 입고 갔다가 되게 놀림받았어. 합정 클럽 분위기는 <span class="highlight">캐주얼 스트릿</span>이 기본이야. 깔끔한 청바지에 흰 티, 운동화만 신어도 전혀 문제없음. 오히려 너무 꾸미면 '아웃사이더' 느낌나서 촌스러워 보일 수도 있어.</p>
-                <p>개인적으로 추천하는 건 <strong>검은색 계열</strong>. 무난하면서도 조명 아래 돋보여서 좋더라. 넘어질 거 생각해서 편한 신발 신는 건 기본이야.</p>
+    <section class="q-box-ir5h">
+      <h3>방문 목적에 맞는 클럽 찾기</h3>
+      <p>친구와 가벼운 음료 한 잔, 대화를 즐기고 싶다면 ‘바 & 라운지’가 강조된 클럽을 선택하세요. 이런 곳은 보통 ‘칵테일 메뉴’와 ‘편안한 좌석’이 풍부합니다.</p>
+      <p>댄스와 파티가 메인이라면, 고음질 사운드와 대형 무대를 갖춘 클럽을 목표로 해야 합니다. EDM, 힙합, 트랩 등 원하는 장르의 라인업을 미리 확인하고, DJ 프로필을 살펴보는 것이 도움이 됩니다.</p>
+      <p>특정 테마 파티(레트로, 복고, 히피 등)를 경험하고 싶다면, 클럽 공식 SNS나 커뮤니티 게시판을 주시하세요. 대부분 사전 예고 없이 ‘스페셜 나이트’를 개최하기 때문에, 빠른 정보 습득이 필요합니다.</p>
+    </section>
 
-                <h3>3. 술값 – 클럽 안에서 사면 호구 된다</h3>
-                <p>이건 진짜 백번 강조해도 모자라. 클럽 안에서 양주 한 병 시키면 보통 <span class="highlight">7~15만원</span> 하는데, 바깥 편의점에서 미리 사서 마시는 게 훨씬 이득이야. 물론 클럽 안에서 안 사면 눈치 보인다고? 천만의 말씀. 다들 그러니까 너도 당당하게. 대신 <strong>물은
+    <section class="q-box-ir5h">
+      <h3>FAQ</h3>
+      <h4>Q1. 합정 클럽 입장료는 어떻게 확인하나요?</h4>
+      <p>A. 대부분 클럽은 공식 홈페이지 혹은 인스타그램 스토리에서 당일 입장료를 공지합니다. 또한 ‘네이버 플러스’나 ‘맵’ 앱에서 ‘입장료’ 카테고리를 확인하면 실시간 가격 변동을 파악할 수 있어요.</p>
+      <h4>Q2. 처음 가는 클럽에서 옷차림은 어떻게 해야 할까요?</h4>
+      <p>A. 대부분 클럽은 ‘스마트 캐주얼’을 권장합니다. 남자는 깔끔한 청바지와 셔츠, 여자는 원피스나 슬랙스와 블라우스 조합이 무난합니다. 너무 화려하거나 과도한 로고 의류는 피하는 것이 좋습니다.</p>
+      <h4>Q3. 여성 전용 라운지는 어디서 찾을 수 있나요?</h4>
+      <p>A. ‘Club C’와 ‘Club D’는 매주 수요일 여성 전용 라운지를 운영합니다. 사전 예약이 필요하니 SNS DM이나 전화 문의를 권장합니다.</p>
+    </section>
+  </main>
+
+  <footer class="r-nav-9r73">
+    <p>© 2026 합정 클럽 선택 가이드. 모든 권리 보유.</p>
+  </footer>
 </body>
 </html>
